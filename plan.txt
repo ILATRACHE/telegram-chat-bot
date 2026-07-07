@@ -1,0 +1,26 @@
+User sends message
+        │
+        ▼
+Telegram sends Update
+        │
+        ▼
+handle_message()
+        │
+        ▼
+Read message text
+        │
+        ▼
+Is it a group?
+        │
+   Yes ───────────► Was the bot mentioned?
+        │                 │
+        │                 ▼
+        │          Remove @BotName
+        │                 │
+        ▼                 ▼
+Private chat       handle_response()
+        │                 │
+        └────────────► Get reply
+                          │
+                          ▼
+                reply_text(response)
