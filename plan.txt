@@ -24,3 +24,43 @@ Private chat       handle_response()
                           │
                           ▼
                 reply_text(response)
+
+telegram-chat-bot/
+│
+├── bot.py
+├── handlers/
+│   ├── commands.py
+│   ├── messages.py
+│   └── errors.py
+│
+├── features/
+│   ├── weather.py
+│   ├── reminder.py
+│   └── stopwatch.py
+│
+├── .env
+├── requirements.txt
+└── README.md
+User
+ │
+ ▼
+/newf
+ │
+ ▼
+Bot:
+💡 What feature would you like to suggest?
+(Type /cancel to cancel.)
+ │
+ ▼
+User:
+Add weather alerts every 30 minutes.
+ │
+ ▼
+Bot sends that suggestion to YOUR chat.
+ │
+ ▼
+Bot:
+✅ Thank you! Your suggestion has been sent to the developer.
+ │
+ ▼
+Conversation ends.
