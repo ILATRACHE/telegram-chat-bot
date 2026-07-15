@@ -10,7 +10,7 @@ from handlers.commands import start_command , help_command , password_generate_c
 from handlers.messages import handle_message , TOKEN 
 from handlers.errors import error
 from database.db import create_table
-from features.QR_code import turn_to_qr , create_qr , Qr
+from features.QR_code import turn_to_qr , create_qr , Qr , ccancel
 
 
 create_table()
@@ -43,7 +43,7 @@ if __name__ == "__main__":
             fallbacks=[])
 
     app.add_handler(weather_conv)
-    
+
     qr_conv = ConversationHandler(
     entry_points=[CommandHandler("qr", Qr)],
     states={
@@ -51,7 +51,7 @@ if __name__ == "__main__":
             MessageHandler(filters.TEXT & ~filters.COMMAND, create_qr)
         ],
     },
-    fallbacks=[CommandHandler("cancel", cancel)],
+    fallbacks=[CommandHandler("cancel", ccancel)],
 )
     app.add_handler(qr_conv)
 
