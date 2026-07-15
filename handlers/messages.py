@@ -18,6 +18,8 @@ def handles_response(text : str) -> str :
         return "hey there!"
     if "how are you" in Processed :
         return"im good thank you"
+    if "otman" in Processed :
+        return"instagram : https://www.instagram.com/otmanjebbour?igsh=MTZxYm04bmI2eWcx \n tiktok : \n youtoube : https://youtube.com/@otmanjebbour?si=0OyjDEA4skUjzBkn \n "
     return "i dont understand what you wrote"
 
 async def handle_message(update : Update, context : ContextTypes.DEFAULT_TYPE):
